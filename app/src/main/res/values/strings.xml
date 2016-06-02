@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HangDroid</string>
+    <string name="main_title">HangDroid</string>
+    <string name="single_player">Single Player</string>
+    <string name="multi_player">Multi-Player</string>
+    <string name="scores">Scores</string>
+    <string name="check_letter">Check letter</string>
+    <string name="value_already_used">Value already used.</string>
+    <string name="empty_value">Please enter a value.</string>
+    <string name="points">Points</string>
+    <string name="point">Point</string>
+    <string name="save_score">Save score</string>
+    <string name="insert_your_name">Insert your name</string>
+    <string name="words">name testing randomly access home cloak dagger whale</string>
+    <string name="introduce_a_word">Introduce a word</string>
+    <string name="play">Play</string>
+    <string name="insert_letter">Insert letter</string>
+</resources>
