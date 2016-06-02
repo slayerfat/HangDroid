@@ -89,7 +89,7 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
      * @param view The button
      */
     public void addLetter(View view) {
-        EditText input = (EditText) findViewById(R.id.editTextLetter);
+        EditText input = (EditText) findViewById(R.id.editText_insert_letter);
 
         String letter = null;
         if (input != null) {
@@ -120,7 +120,7 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
                 showLetter(i, value);
 
                 guesses++;
-                incorrect = !incorrect;
+                incorrect = false;
             }
         }
 
@@ -137,7 +137,6 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
         if (guesses >= word.length()) {
             score++;
             clearScreen();
-            setRandomWord();
         }
 
         Log.d("Logger", "Number of guesses: " + guesses);
@@ -188,7 +187,7 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
      * @param resource The drawable id
      */
     public void changeStepImage(int resource) {
-        ImageView image = (ImageView) findViewById(R.id.imageView);
+        ImageView image = (ImageView) findViewById(R.id.imageView_main_image);
         assert image != null;
         image.setImageResource(resource);
     }
@@ -232,5 +231,7 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
     private void setRandomWord() {
         Words words = new Words(getResources().getString(R.string.words));
         word = words.getWord();
+
+        Log.d("logger", "The selected word is " + word);
     }
 }
