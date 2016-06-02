@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -53,13 +52,11 @@ public class SinglePlayerGameActivity extends AppCompatActivity {
     protected void createLettersTextView() {
         lettersLayout = (LinearLayout) findViewById(R.id.layoutLetters);
         assert lettersLayout != null;
-        final Float padding = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics());
 
         for (int i = 0; i < word.length(); i++) {
-            TextView textView = new TextView(this);
-            textView.setText("_");
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40);
-            textView.setPadding(0, 0, padding.intValue(), 0);
+            TextView textView = (TextView) getLayoutInflater()
+                    .inflate(R.layout.partial_underscore_letter, null);
+
             lettersLayout.addView(textView);
         }
     }

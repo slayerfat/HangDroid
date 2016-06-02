@@ -15,4 +15,5 @@
     <string name="introduce_a_word">Introduce a word</string>
     <string name="play">Play</string>
     <string name="insert_letter">Insert letter</string>
+    <string name="underscore">_</string>
 </resources>
